@@ -1,0 +1,37 @@
+name: Proponer una mejora
+description: Explica una necesidad y el resultado que tendría valor.
+title: "[Mejora]: "
+body:
+  - type: markdown
+    attributes:
+      value: No incluyas secretos, datos personales, información de clientes ni detalles sensibles.
+  - type: textarea
+    id: need
+    attributes:
+      label: Necesidad
+      description: ¿Qué problema concreto se quiere resolver y para quién?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Resultado esperado
+      description: Describe el comportamiento observable y cómo sabremos que funciona.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Propuesta
+      description: Comparte una solución posible, alternativas y límites conocidos.
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmaciones
+      options:
+        - label: Busqué propuestas duplicadas.
+          required: true
+        - label: Eliminé secretos, datos personales y otra información sensible.
+          required: true

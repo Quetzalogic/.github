@@ -1,0 +1,51 @@
+name: Reportar un error
+description: Describe un comportamiento incorrecto que pueda reproducirse.
+title: "[Error]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por reportarlo. No incluyas secretos, datos personales, información de clientes ni detalles sensibles. Para vulnerabilidades, sigue SECURITY.md y usa el reporte privado.
+  - type: textarea
+    id: problem
+    attributes:
+      label: ¿Qué ocurrió?
+      description: Describe el resultado observado y el esperado.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Pasos para reproducirlo
+      description: Incluye un ejemplo mínimo con datos ficticios.
+      placeholder: |
+        1. …
+        2. …
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Entorno relevante
+      description: Indica versión, sistema o navegador sin revelar infraestructura sensible.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidencia adicional
+      description: Agrega registros o capturas ya depurados, si ayudan.
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmaciones
+      options:
+        - label: Busqué reportes duplicados.
+          required: true
+        - label: Eliminé secretos, datos personales y otra información sensible.
+          required: true
+        - label: Este reporte no describe una vulnerabilidad de seguridad.
+          required: true

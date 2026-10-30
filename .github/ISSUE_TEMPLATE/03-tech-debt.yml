@@ -1,0 +1,44 @@
+name: Registrar deuda técnica
+description: Documenta un costo técnico acotado y una mejora verificable.
+title: "[Deuda técnica]: "
+body:
+  - type: markdown
+    attributes:
+      value: No incluyas secretos, datos personales, información de clientes ni detalles sensibles.
+  - type: textarea
+    id: debt
+    attributes:
+      label: Deuda observada
+      description: Describe el problema técnico con evidencia no sensible.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impacto
+      description: Explica el costo, riesgo o fricción actual.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Criterios de cierre
+      description: Define pruebas o resultados observables que permitan cerrar el trabajo.
+    validations:
+      required: true
+  - type: textarea
+    id: approach
+    attributes:
+      label: Enfoque sugerido
+      description: Indica alcance, alternativas o dependencias conocidas.
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmaciones
+      options:
+        - label: Busqué registros duplicados.
+          required: true
+        - label: Eliminé secretos, datos personales y otra información sensible.
+          required: true
